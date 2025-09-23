@@ -155,6 +155,66 @@ body {
   color: #555;
 }
 
+.tourist-place-info .btn {
+  font-size: 0.98rem;
+  border-radius: 16px;
+  padding: 4px 16px;
+  box-shadow: 0 2px 8px rgba(80,120,180,0.08);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Carousel frecce personalizzate per i luoghi turistici */
+#touristPlacesCarousel .carousel-control-prev,
+#touristPlacesCarousel .carousel-control-next {
+  width: 56px;
+  height: 56px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  z-index: 2;
+}
+#touristPlacesCarousel .carousel-control-prev {
+  left: -32px;
+}
+#touristPlacesCarousel .carousel-control-next {
+  right: -32px;
+}
+#touristPlacesCarousel .carousel-control-prev-icon,
+#touristPlacesCarousel .carousel-control-next-icon {
+  background-color: #2563eb;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  box-shadow: 0 4px 16px rgba(80,120,180,0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#touristPlacesCarousel .carousel-control-prev-icon::after,
+#touristPlacesCarousel .carousel-control-next-icon::after {
+  content: '';
+}
+#touristPlacesCarousel .carousel-control-prev-icon,
+#touristPlacesCarousel .carousel-control-next-icon {
+  background-size: 60% 60%;
+}
+#touristPlacesCarousel .carousel-control-prev:hover .carousel-control-prev-icon,
+#touristPlacesCarousel .carousel-control-next:hover .carousel-control-next-icon {
+  background-color: #1e40af;
+  box-shadow: 0 8px 32px rgba(80,120,180,0.22);
+}
+@media (max-width: 768px) {
+  #touristPlacesCarousel .carousel-control-prev {
+    left: -12px;
+  }
+  #touristPlacesCarousel .carousel-control-next {
+    right: -12px;
+  }
+}
+
 @media (max-width: 768px) {
   .gallery img {
     height: 180px;

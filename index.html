@@ -83,11 +83,22 @@
 
 <!-- Gallery -->
 <!-- Posti turistici da visitare -->
+
 <section class="py-5 bg-light">
   <div class="container">
     <h2 class="text-center mb-4">I principali luoghi da visitare a Roma</h2>
-    <div class="row justify-content-center g-4" id="tourist-places-gallery">
-      <!-- Le card saranno generate dinamicamente da script.js -->
+    <div id="touristPlacesCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner" id="tourist-places-carousel-inner">
+        <!-- Slides generate dinamicamente da script.js -->
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#touristPlacesCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Precedente</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#touristPlacesCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Successiva</span>
+      </button>
     </div>
   </div>
 </section>

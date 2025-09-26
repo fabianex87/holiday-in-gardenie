@@ -276,9 +276,9 @@ const langMap = {
   'fr': 'fr'
 };
 function getLang() {
-  const navLang = navigator.language || navigator.userLanguage || 'it';
+  const navLang = navigator.language || navigator.userLanguage || 'en';
   const code = navLang.split('-')[0].toLowerCase();
-  return langMap[code] || 'it';
+  return langMap[code] || 'en';
 }
 window.lang = getLang(); // automatica, togli per test manuale
 // Per test manuale: 

@@ -2,7 +2,7 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   // Lingua dal main script (window.lang impostato da index.html)
-  const lang = window.lang || 'it';
+  const lang = window.lang || 'en';
   // Carica traduzioni
   fetch('lang/' + lang + '.json')
     .then(r => r.json())

@@ -13,17 +13,17 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="#">Holiday in Gardenie</a>
+    <a class="navbar-brand fw-bold" href="#" data-i18n="navbar_brand">Holiday in Gardenie</a>
   </div>
 </nav>
 
 <!-- Hero -->
 <header class="hero d-flex align-items-center">
   <div class="container text-center">
-    <h1 class="display-4 fw-bold">Holiday in Gardenie</h1>
-    <p class="lead">Il tuo alloggio turistico a Roma – Centocelle</p>
-    <a href="https://wa.me/393201796910?text=Ciao%20vorrei%20prenotare%20Holiday%20in%20Gardenie%20a%20Roma" target="_blank" class="btn btn-primary btn-lg mt-3">
-      <img src="assets/whatsapp.webp" alt="WhatsApp" width="28" height="28" style="margin-right:8px;"> Prenota ora su WhatsApp
+    <h1 class="display-4 fw-bold" data-i18n="hero_title">Holiday in Gardenie</h1>
+    <p class="lead" data-i18n="hero_subtitle">Il tuo alloggio turistico a Roma – Centocelle</p>
+    <a href="https://wa.me/393201796910?text=Ciao%20vorrei%20prenotare%20Holiday%20in%20Gardenie%20a%20Roma" target="_blank" class="btn btn-primary btn-lg mt-3" data-i18n-btn="hero_button">
+      <img src="assets/whatsapp.webp" alt="WhatsApp" width="28" height="28" style="margin-right:8px;"> <span data-i18n="hero_button">Prenota ora su WhatsApp</span>
     </a>
     <!-- <div class="mt-2 text-white-50" style="font-size:1.05rem;">Prenota direttamente e risparmia fino al 40% rispetto alle piattaforme!</div> -->
   </div>
@@ -38,27 +38,27 @@
       </div>
       <div class="col-md-6">
         <div class="p-4 rounded-4 shadow bg-white">
-          <h2 class="fw-bold mb-3">Un soggiorno confortevole a Roma</h2>
-          <p class="mb-3" style="font-size:1.08rem;">
+          <h2 class="fw-bold mb-3" data-i18n="about_title">Un soggiorno confortevole a Roma</h2>
+          <p class="mb-3" style="font-size:1.08rem;" data-i18n-html="about_desc">
             Accogliente appartamento turistico situato a <strong>Centocelle</strong>, ben collegato con il centro di Roma.<br>
             WiFi, aria condizionata, cucina attrezzata e un ambiente curato nei dettagli.
           </p>
           <div class="mb-3">
-            <span class="fw-bold text-primary bg-light rounded-pill px-3 py-1" style="font-size:1.15rem;">Prezzo da 50€/notte</span>
-            <span class="text-muted ms-2">· Offerte speciali per soggiorni lunghi</span>
+            <span class="fw-bold text-primary bg-light rounded-pill px-3 py-1" style="font-size:1.15rem;" data-i18n="about_price">Prezzo da 50€/notte</span>
+            <span class="text-muted ms-2" data-i18n="about_offer">· Offerte speciali per soggiorni lunghi</span>
           </div>
           <div class="d-flex flex-wrap gap-3 mb-2">
             <div class="p-2 px-3 rounded-4 bg-light text-dark d-flex align-items-center" style="font-size:1.08rem;">
               <div class="d-flex flex-column w-100">
-                <div class="mb-1">
+                <div class="mb-1" data-i18n-html="checkin">
                   <span class="fw-semibold">Check-in:</span> dalle <strong>15:00</strong>
                 </div>
-                <div>
+                <div data-i18n-html="checkout">
                   <span class="fw-semibold">Check-out:</span> entro le <strong>10:00</strong>
                 </div>
               </div>
             </div>
-            <span class="badge bg-primary bg-opacity-10 text-primary fw-semibold d-flex align-items-center px-3 py-2" style="font-size:1.08rem;">
+            <span class="badge bg-primary bg-opacity-10 text-primary fw-semibold d-flex align-items-center px-3 py-2" style="font-size:1.08rem;" data-i18n="self_checkin">
               Self check-in
             </span>
           </div>
@@ -71,29 +71,29 @@
 <!-- Services -->
 <section class="bg-light py-5">
   <div class="container text-center">
-    <h2 class="mb-4">Servizi Inclusi</h2>
+    <h2 class="mb-4" data-i18n="services_title">Servizi Inclusi</h2>
     <div class="row g-4">
       <div class="col-md-4">
         <div class="card h-100 shadow-sm border-0">
           <div class="card-body">
-            <h5 class="card-title">📶 WiFi Veloce</h5>
-            <p class="card-text">Connessione stabile per lavoro o svago.</p>
+            <h5 class="card-title">📶 <span data-i18n="service_wifi">WiFi Veloce</span></h5>
+            <p class="card-text" data-i18n="service_wifi_desc">Connessione stabile per lavoro o svago.</p>
           </div>
         </div>
       </div>
       <div class="col-md-4">
         <div class="card h-100 shadow-sm border-0">
           <div class="card-body">
-            <h5 class="card-title">❄️ Aria Condizionata</h5>
-            <p class="card-text">Clima confortevole in ogni stagione.</p>
+            <h5 class="card-title">❄️ <span data-i18n="service_ac">Aria Condizionata</span></h5>
+            <p class="card-text" data-i18n="service_ac_desc">Clima confortevole in ogni stagione.</p>
           </div>
         </div>
       </div>
       <div class="col-md-4">
         <div class="card h-100 shadow-sm border-0">
           <div class="card-body">
-            <h5 class="card-title">🍳 Cucina Attrezzata</h5>
-            <p class="card-text">Tutto ciò che ti serve per preparare i tuoi pasti.</p>
+            <h5 class="card-title">🍳 <span data-i18n="service_kitchen">Cucina Attrezzata</span></h5>
+            <p class="card-text" data-i18n="service_kitchen_desc">Tutto ciò che ti serve per preparare i tuoi pasti.</p>
           </div>
         </div>
       </div>
@@ -106,7 +106,7 @@
 
 <section class="py-5 bg-light">
   <div class="container">
-    <h2 class="text-center mb-4">I principali luoghi da visitare a Roma</h2>
+    <h2 class="text-center mb-4" data-i18n="tourist_title">I principali luoghi da visitare a Roma</h2>
     <div id="touristPlacesCarousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner" id="tourist-places-carousel-inner">
         <!-- Slides generate dinamicamente da script.js -->
@@ -125,7 +125,7 @@
 
 <section class="py-5">
   <div class="container">
-    <h2 class="text-center mb-4">Galleria</h2>
+    <h2 class="text-center mb-4" data-i18n="gallery_title">Galleria</h2>
     <div class="d-flex justify-content-center">
         <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel" style="max-width:700px;width:100%;">
           <!-- Indicatori, immagini e frecce saranno generati da script.js -->
@@ -139,15 +139,15 @@
 <!-- Recensioni ospiti -->
 <section class="py-5 bg-light">
   <div class="container">
-    <h2 class="text-center mb-4">Cosa dicono i nostri ospiti</h2>
+    <h2 class="text-center mb-4" data-i18n="reviews_title">Cosa dicono i nostri ospiti</h2>
     <div class="row justify-content-center g-4">
       <div class="col-md-4">
         <div class="review-card p-4 rounded-4 shadow-sm bg-white h-100">
           <div class="mb-2">
             <span style="color:#fbbf24;font-size:1.2rem;">★★★★★</span>
           </div>
-          <p class="mb-2">"Appartamento pulito e accogliente, posizione comoda per visitare Roma. Host gentilissimo!"</p>
-          <div class="text-muted small">– Marco, agosto 2025</div>
+          <p class="mb-2" data-i18n="review1">"Appartamento pulito e accogliente, posizione comoda per visitare Roma. Host gentilissimo!"</p>
+          <div class="text-muted small" data-i18n="review1_author">– Marco, agosto 2025</div>
         </div>
       </div>
       <div class="col-md-4">
@@ -155,8 +155,8 @@
           <div class="mb-2">
             <span style="color:#fbbf24;font-size:1.2rem;">★★★★★</span>
           </div>
-          <p class="mb-2">"Ottima connessione WiFi e zona tranquilla. Consigliato per soggiorni di lavoro!"</p>
-          <div class="text-muted small">– Laura, giugno 2025</div>
+          <p class="mb-2" data-i18n="review2">"Ottima connessione WiFi e zona tranquilla. Consigliato per soggiorni di lavoro!"</p>
+          <div class="text-muted small" data-i18n="review2_author">– Laura, giugno 2025</div>
         </div>
       </div>
       <div class="col-md-4">
@@ -164,8 +164,8 @@
           <div class="mb-2">
             <span style="color:#fbbf24;font-size:1.2rem;">★★★★★</span>
           </div>
-          <p class="mb-2">"Soggiorno perfetto, host disponibile e casa dotata di ogni comfort!"</p>
-          <div class="text-muted small">– Giulia, maggio 2025</div>
+          <p class="mb-2" data-i18n="review3">"Soggiorno perfetto, host disponibile e casa dotata di ogni comfort!"</p>
+          <div class="text-muted small" data-i18n="review3_author">– Giulia, maggio 2025</div>
         </div>
       </div>
     </div>
@@ -173,30 +173,30 @@
 </section>
 <section class="py-5">
   <div class="container">
-    <h2 class="text-center mb-4">Come arrivare da Stazione Termini</h2>
+    <h2 class="text-center mb-4" data-i18n="how_to_arrive_title">Come arrivare da Stazione Termini</h2>
     <div class="row justify-content-center g-4">
       <div class="col-md-4 text-center">
         <div class="p-4 rounded-4 shadow-sm bg-white h-100">
           <img src="assets/metro.svg" alt="Metro" width="36" height="36" class="mb-2">
-          <h5 class="mb-2">Metro + Bus</h5>
-          <p class="mb-1">Metro A (Termini → San Giovanni) + Metro C (San Giovanni → Gardenie)</p>
-          <span class="badge bg-primary">~35 min</span>
+          <h5 class="mb-2" data-i18n="how_to_arrive_metro">Metro + Bus</h5>
+          <p class="mb-1" data-i18n="how_to_arrive_metro_desc">Metro A (Termini → San Giovanni) + Metro C (San Giovanni → Gardenie)</p>
+          <span class="badge bg-primary" data-i18n="how_to_arrive_metro_time">~35 min</span>
         </div>
       </div>
       <div class="col-md-4 text-center">
         <div class="p-4 rounded-4 shadow-sm bg-white h-100">
           <img src="assets/bus.svg" alt="Bus" width="36" height="36" class="mb-2">
-          <h5 class="mb-2">Tram diretto</h5>
-          <p class="mb-1">Tram 5 (Termini → Piazza Gardenie)</p>
-          <span class="badge bg-primary">~45 min</span>
+          <h5 class="mb-2" data-i18n="how_to_arrive_tram">Tram diretto</h5>
+          <p class="mb-1" data-i18n="how_to_arrive_tram_desc">Tram 5 (Termini → Piazza Gardenie)</p>
+          <span class="badge bg-primary" data-i18n="how_to_arrive_tram_time">~45 min</span>
         </div>
       </div>
       <div class="col-md-4 text-center">
         <div class="p-4 rounded-4 shadow-sm bg-white h-100">
           <img src="assets/taxi.svg" alt="Taxi" width="36" height="36" class="mb-2">
-          <h5 class="mb-2">Taxi</h5>
-          <p class="mb-1">Termini → Viale della Primavera 119A</p>
-          <span class="badge bg-success">~20 min</span>
+          <h5 class="mb-2" data-i18n="how_to_arrive_taxi">Taxi</h5>
+          <p class="mb-1" data-i18n="how_to_arrive_taxi_desc">Termini → Viale della Primavera 119A</p>
+          <span class="badge bg-success" data-i18n="how_to_arrive_taxi_time">~20 min</span>
         </div>
       </div>
     </div>
@@ -207,9 +207,9 @@
   <div class="container">
     <div class="row align-items-center g-4">
       <div class="col-md-6">
-        <h2 class="mb-3">Dove siamo</h2>
-        <p class="mb-2"><strong>Viale della Primavera 119A, 00172, Roma</strong></p>
-        <p class="text-muted">Zona Centocelle, facilmente raggiungibile dal centro di Roma.</p>
+        <h2 class="mb-3" data-i18n="location_title">Dove siamo</h2>
+        <p class="mb-2"><strong data-i18n="location_address">Viale della Primavera 119A, 00172, Roma</strong></p>
+        <p class="text-muted" data-i18n="location_zone">Zona Centocelle, facilmente raggiungibile dal centro di Roma.</p>
       </div>
       <div class="col-md-6">
         <div class="rounded-4 overflow-hidden shadow" style="min-height:280px;">
@@ -227,15 +227,15 @@
     <div class="row justify-content-center">
       <div class="col-lg-8">
         <div class="contact-card p-4 p-md-5 text-center">
-          <h2 class="mb-3 fw-bold">Contattaci</h2>
-          <p class="lead mb-4">Prenota direttamente con noi e risparmia sulle commissioni</p>
+          <h2 class="mb-3 fw-bold" data-i18n="contact_title">Contattaci</h2>
+          <p class="lead mb-4" data-i18n="contact_subtitle">Prenota direttamente con noi e risparmia sulle commissioni</p>
           <div class="row g-4 mb-4">
             <div class="col-12 col-md-4">
               <div class="contact-method rounded-4 p-3 h-100">
                 <div class="icon mb-2" style="height:2.2rem;">
                   <img src="assets/whatsapp.webp" alt="WhatsApp" width="32" height="32" style="display:inline-block;">
                 </div>
-                <a href="https://wa.me/393201796910?text=Ciao%20vorrei%20prenotare%20Holiday%20in%20Gardenie%20a%20Roma" target="_blank" class="contact-link">+39 320 1796910</a>
+                <a href="https://wa.me/393201796910?text=Ciao%20vorrei%20prenotare%20Holiday%20in%20Gardenie%20a%20Roma" target="_blank" class="contact-link" data-i18n="contact_whatsapp">+39 320 1796910</a>
               </div>
             </div>
             <div class="col-12 col-md-4">
@@ -243,7 +243,7 @@
                 <div class="icon mb-2" style="height:2.2rem;">
                   <img src="assets/telegram.webp" alt="Telegram" width="32" height="32" style="display:inline-block;">
                 </div>
-                <a href="https://t.me/fabianex87" target="_blank" class="contact-link">Telegram</a>
+                <a href="https://t.me/fabianex87" target="_blank" class="contact-link" data-i18n="contact_telegram">Telegram</a>
               </div>
             </div>
             <div class="col-12 col-md-4">
@@ -251,11 +251,11 @@
                 <div class="icon mb-2" style="height:2.2rem;">
                   <img src="assets/instagram.webp" alt="Instagram" width="32" height="32" style="display:inline-block;">
                 </div>
-                <a href="https://www.instagram.com/holidayingardenie/" target="_blank" class="contact-link">Instagram</a>
+                <a href="https://www.instagram.com/holidayingardenie/" target="_blank" class="contact-link" data-i18n="contact_instagram">Instagram</a>
               </div>
             </div>
           </div>
-          <a href="https://www.airbnb.it/h/holidayingardenie" target="_blank" class="btn btn-primary btn-lg rounded-pill px-4 shadow">Vai alla pagina Airbnb</a>
+          <a href="https://www.airbnb.it/h/holidayingardenie" target="_blank" class="btn btn-primary btn-lg rounded-pill px-4 shadow" data-i18n="contact_airbnb">Vai alla pagina Airbnb</a>
         </div>
       </div>
     </div>
@@ -264,9 +264,42 @@
 
 <!-- Footer -->
 <footer class="py-3 text-center text-muted bg-light">
-  <small>&copy; 2025 Holiday in Gardenie</small>
+  <small data-i18n-html="footer">&copy; 2025 Holiday in Gardenie</small>
 </footer>
 
+<script>
+// Gestione lingua globale
+const langMap = {
+  'it': 'it',
+  'en': 'en',
+  'es': 'es',
+  'fr': 'fr'
+};
+function getLang() {
+  const navLang = navigator.language || navigator.userLanguage || 'it';
+  const code = navLang.split('-')[0].toLowerCase();
+  return langMap[code] || 'it';
+}
+window.lang = getLang(); // automatica, togli per test manuale
+// Per test manuale: 
+// window.lang = "fr"; // oppure "en", "es", "fr", "it"
+
+function applyTranslations(dict) {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (dict[key]) el.textContent = dict[key];
+  });
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    const key = el.getAttribute('data-i18n-html');
+    if (dict[key]) el.innerHTML = dict[key];
+  });
+}
+window.addEventListener('DOMContentLoaded', () => {
+  fetch('lang/' + window.lang + '.json')
+    .then(r => r.json())
+    .then(dict => applyTranslations(dict));
+});
+</script>
 <script src="script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>

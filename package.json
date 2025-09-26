@@ -1,0 +1,11 @@
+{
+  "name": "holiday-in-gardenie",
+  "version": "1.0.0",
+  "description": "Sito statico multilingua per Holiday in Gardenie",
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "devDependencies": {
+    "serve": "^14.0.1"
+  }
+}

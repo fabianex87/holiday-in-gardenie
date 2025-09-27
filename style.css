@@ -12,11 +12,11 @@
 /* style.css */
 
 :root {
-  --color-1: #2563eb; /* Primario */
-  --color-2: #b2d8ff; /* Secondario */
-  --color-3: #fcf9f8; /* Sfondo */
-  --color-4: #e3eafc; /* Bordo/card */
-  --color-5: #1e40af; /* Accento/scuro */
+  --color-1: #2563eb; /* Primario #2563eb */
+  --color-2: #b2d8ff; /* Secondario #b2d8ff */
+  --color-3: #fcf9f8; /* Sfondo #fcf9f8 */
+  --color-4: #e3eafc; /* Bordo/card #e3eafc */
+  --color-5: #1e40af; /* Accento/scuro #1e40af */
 }
 
 body {

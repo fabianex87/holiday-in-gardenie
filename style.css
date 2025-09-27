@@ -238,6 +238,14 @@ body {
   background-color: var(--color-5);
   box-shadow: 0 8px 32px rgba(80,120,180,0.22);
 }
+/* Fix saltelli verticali nel carousel gallery  */
+#galleryCarousel .carousel-caption {
+  min-height: 48px; /* o 2-3 righe di testo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media (max-width: 768px) {
   #touristPlacesCarousel .carousel-control-prev {
     left: -12px;

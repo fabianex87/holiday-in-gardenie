@@ -69,5 +69,12 @@
     "piazza_di_spagna_desc": "Célèbre pour l'escalier de la Trinité des Monts et la Fontaine de la Barcaccia.",
     "foro_romano_name": "Forum Romain",
     "foro_romano_desc": "Le cœur de la Rome antique, zone archéologique avec temples et arcs monumentaux."
+  },
+  "gallery_images": {
+  "img1": "Chambre double avec salle de bain privée",
+  "img2": "Chambre double avec deux lits simples",
+  "img3": "Chambre simple confortable",
+  "img4": "Vue extérieure de la propriété",
+  "img5": "Entrée principale"
   }
 }

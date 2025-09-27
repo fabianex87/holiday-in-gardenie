@@ -69,5 +69,13 @@
     "piazza_di_spagna_desc": "Celebre per la scalinata di Trinità dei Monti e la Fontana della Barcaccia.",
     "foro_romano_name": "Foro Romano",
     "foro_romano_desc": "Il cuore dell’antica Roma, area archeologica con templi e archi monumentali."
-  }
+  },
+  "gallery_images": {
+  "img1": "Camera matrimoniale con bagno privato",
+  "img2": "Camera doppia con due letti singoli",
+  "img3": "Camera singola accogliente",
+  "img4": "Vista esterna della struttura",
+  "img5": "Ingresso principale"
+}
+
 }

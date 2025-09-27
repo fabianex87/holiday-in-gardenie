@@ -1,13 +1,14 @@
 // script.js
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Lingua dal main script (window.lang impostato da index.html)
+  // Language from main script (window.lang set in index.html)
   const lang = window.lang || 'en';
-  // Carica traduzioni
+
+  // Load translations
   fetch('lang/' + lang + '.json')
     .then(r => r.json())
     .then(dict => {
-      // Galleria dei posti turistici - ora in carousel
+      // Tourist places gallery - now in carousel
       const touristPlaces = [
         {
           key: 'colosseo',
@@ -66,60 +67,75 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       ];
 
-      // Carousel dei luoghi turistici - sempre scalabile
+      // Render tourist places carousel dynamically
       function renderTouristCarousel() {
         const touristCarouselInner = document.getElementById('tourist-places-carousel-inner');
         if (!touristCarouselInner) return;
+
         let cardsPerSlide = 3;
         if (window.innerWidth < 576) {
           cardsPerSlide = 1;
         } else if (window.innerWidth < 992) {
           cardsPerSlide = 2;
         }
+
         const slides = [];
         for (let i = 0; i < touristPlaces.length; i += cardsPerSlide) {
           slides.push(touristPlaces.slice(i, i + cardsPerSlide));
         }
+
         touristCarouselInner.innerHTML = '';
         slides.forEach((slideCards, idx) => {
           const slide = document.createElement('div');
           slide.className = 'carousel-item' + (idx === 0 ? ' active' : '');
           const row = document.createElement('div');
           row.className = 'row justify-content-center g-4';
+
           slideCards.forEach(place => {
             const col = document.createElement('div');
             col.className = 'col-12 col-md-6 col-lg-4 d-flex';
+
             const card = document.createElement('div');
             card.className = 'tourist-place-card flex-grow-1';
+
             const img = document.createElement('img');
             img.src = place.img;
             img.alt = dict.tourist_places[place.key + '_name'];
             img.className = 'tourist-place-img';
+
             const info = document.createElement('div');
             info.className = 'tourist-place-info';
+
             const title = document.createElement('div');
             title.className = 'tourist-place-title';
             title.textContent = dict.tourist_places[place.key + '_name'];
+
             const desc = document.createElement('div');
             desc.className = 'tourist-place-desc';
             desc.textContent = dict.tourist_places[place.key + '_desc'];
+
             const mapsBtn = document.createElement('a');
             mapsBtn.href = place.maps;
             mapsBtn.target = '_blank';
             mapsBtn.className = 'btn btn-outline-primary btn-sm mt-2';
             mapsBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16"><path d="M8 16s6-5.686 6-10A6 6 0 1 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg> Vedi su Google Maps';
+
             info.appendChild(title);
             info.appendChild(desc);
             info.appendChild(mapsBtn);
+
             card.appendChild(img);
             card.appendChild(info);
+
             col.appendChild(card);
             row.appendChild(col);
           });
+
           slide.appendChild(row);
           touristCarouselInner.appendChild(slide);
         });
-        // Mostra/nasconde le frecce in base al numero di slide
+
+        // Show/hide arrows depending on slides count
         const carousel = document.getElementById('touristPlacesCarousel');
         if (carousel) {
           const prevBtn = carousel.querySelector('.carousel-control-prev');
@@ -134,16 +150,60 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
 
-      // Inizializza e aggiorna al resize
+      // Initialize and update on resize
       if (document.getElementById('tourist-places-carousel-inner')) {
         renderTouristCarousel();
         window.addEventListener('resize', renderTouristCarousel);
       }
 
-      // ...existing code...
+      // ==============================
+      // UPDATED: Gallery carousel with translations
+      // ==============================
+      const galleryImagesData = [
+        { src: 'assets/gallery1.avif', alt: dict.gallery_images.img1 },
+        { src: 'assets/gallery2.avif', alt: dict.gallery_images.img2 },
+        { src: 'assets/gallery3.avif', alt: dict.gallery_images.img3 },
+        { src: 'assets/esterno.avif', alt: dict.gallery_images.img4 },
+        { src: 'assets/porta.avif', alt: dict.gallery_images.img5 }
+      ];
+
+      const carousel = document.getElementById('galleryCarousel');
+      if (carousel) {
+        // Indicators
+        let indicators = '<div class="carousel-indicators">';
+        galleryImagesData.forEach((img, i) => {
+          indicators += `<button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="${i}" ${i === 0 ? 'class="active" aria-current="true"' : ''} aria-label="Photo ${i+1}"></button>`;
+        });
+        indicators += '</div>';
+
+        // Items
+        let items = '<div class="carousel-inner rounded-4 shadow">';
+        galleryImagesData.forEach((img, i) => {
+          items += `<div class="carousel-item${i === 0 ? ' active' : ''}">` +
+            `<img src="${img.src}" class="d-block w-100" alt="${img.alt}" style="height:400px;object-fit:cover;border-radius:18px;">` +
+            `<div class="carousel-caption d-block bg-dark bg-opacity-50 rounded-3 px-3 py-2 mb-3" style="bottom:10px;">` +
+            `<span class="fs-5 text-white">${img.alt}</span>` +
+            `</div></div>`;
+        });
+        items += '</div>';
+
+        // Controls
+        const controls = `
+          <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        `;
+
+        carousel.innerHTML = indicators + items + controls;
+      }
     });
 
-  // Effetto smooth scroll per i link interni
+  // Smooth scroll for internal links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener("click", function(e) {
       e.preventDefault();
@@ -153,53 +213,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-
-  // Carousel dinamico Bootstrap
-  const galleryImagesData = [
-    { src: 'assets/gallery1.avif', alt: 'Camera matrimoniale' },
-    { src: 'assets/gallery2.avif', alt: 'Soggiorno luminoso' },
-    { src: 'assets/gallery3.avif', alt: 'Bagno moderno' },
-    { src: 'assets/esterno.avif', alt: 'Esterno' },
-    { src: 'assets/porta.avif', alt: 'Ingresso struttura' },
-    // Aggiungi qui altre immagini, es: { src: 'assets/gallery4.avif', alt: 'Alt descrizione' }
-  ];
-
-  const carousel = document.getElementById('galleryCarousel');
-  if (carousel) {
-    // Indicatori
-    let indicators = '<div class="carousel-indicators">';
-    galleryImagesData.forEach((img, i) => {
-      indicators += `<button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="${i}" ${i === 0 ? 'class="active" aria-current="true"' : ''} aria-label="Foto ${i+1}"></button>`;
-    });
-    indicators += '</div>';
-
-    // Immagini
-    let items = '<div class="carousel-inner rounded-4 shadow">';
-    galleryImagesData.forEach((img, i) => {
-      items += `<div class="carousel-item${i === 0 ? ' active' : ''}">` +
-        `<img src="${img.src}" class="d-block w-100" alt="${img.alt}" style="height:400px;object-fit:cover;border-radius:18px;">` +
-        `<div class="carousel-caption d-block bg-dark bg-opacity-50 rounded-3 px-3 py-2 mb-3" style="bottom:10px;">` +
-        `<span class="fs-5 text-white">${img.alt}</span>` +
-        `</div></div>`;
-    });
-    items += '</div>';
-
-    // Frecce
-    const controls = `
-      <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Precedente</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Successiva</span>
-      </button>
-    `;
-
-    carousel.innerHTML = indicators + items + controls;
-  }
-
-  // Lightbox semplice per la gallery
+  // Simple lightbox for gallery
   document.addEventListener('click', function(e) {
     if (e.target.classList.contains('gallery-img')) {
       const img = e.target;

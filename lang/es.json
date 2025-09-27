@@ -69,5 +69,12 @@
     "piazza_di_spagna_desc": "Famosa por la escalinata de Trinità dei Monti y la Fuente de la Barcaccia.",
     "foro_romano_name": "Foro Romano",
     "foro_romano_desc": "El corazón de la antigua Roma, zona arqueológica con templos y arcos monumentales."
+  },
+  "gallery_images": {
+  "img1": "Habitación doble con baño privado",
+  "img2": "Habitación doble con dos camas individuales",
+  "img3": "Acogedora habitación individual",
+  "img4": "Vista exterior de la propiedad",
+  "img5": "Entrada principal"
   }
 }

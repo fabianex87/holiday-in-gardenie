@@ -69,5 +69,12 @@
     "piazza_di_spagna_desc": "Famous for the Trinità dei Monti staircase and the Barcaccia Fountain.",
     "foro_romano_name": "Roman Forum",
     "foro_romano_desc": "The heart of ancient Rome, archaeological area with temples and monumental arches."
+  },
+  "gallery_images": {
+  "img1": "Double room with private bathroom",
+  "img2": "Twin room with two single beds",
+  "img3": "Cozy single room",
+  "img4": "Exterior view of the property",
+  "img5": "Main entrance"
   }
 }

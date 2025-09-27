@@ -37,11 +37,11 @@ function updateStyleCss(colors) {
   const before = css.slice(0, start + PALETTE_START.length);
   const after = css.slice(end);
   const comments = [
-    '/* Primario */',
-    '/* Secondario */',
-    '/* Sfondo */',
-    '/* Bordo/card */',
-    '/* Accento/scuro */'
+    '/* Primario #2563eb */',
+    '/* Secondario #b2d8ff */',
+    '/* Sfondo #fcf9f8 */',
+    '/* Bordo/card #e3eafc */',
+    '/* Accento/scuro #1e40af */'
   ];
   const palette = colors.map((c, i) => `\n  --color-${i+1}: ${c}; ${comments[i]}`).join('');
   const newCss = before + palette + '\n' + after;

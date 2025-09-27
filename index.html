@@ -22,7 +22,7 @@
   <div class="container text-center">
     <h1 class="display-4 fw-bold" data-i18n="hero_title">Holiday in Gardenie</h1>
     <p class="lead" data-i18n="hero_subtitle">Il tuo alloggio turistico a Roma – Centocelle</p>
-    <a href="https://wa.me/393201796910?text=Ciao%20vorrei%20prenotare%20Holiday%20in%20Gardenie%20a%20Roma" target="_blank" class="btn btn-primary btn-lg mt-3" data-i18n-btn="hero_button">
+  <a href="https://wa.me/393201796910?text=Ciao%20vorrei%20prenotare%20Holiday%20in%20Gardenie%20a%20Roma" target="_blank" class="btn btn-primary btn-lg mt-3" data-i18n-btn="hero_button" data-i18n-href="hero_whatsapp_href">
       <img src="assets/whatsapp.webp" alt="WhatsApp" width="28" height="28" style="margin-right:8px;"> <span data-i18n="hero_button">Prenota ora su WhatsApp</span>
     </a>
     <!-- <div class="mt-2 text-white-50" style="font-size:1.05rem;">Prenota direttamente e risparmia fino al 40% rispetto alle piattaforme!</div> -->
@@ -293,6 +293,10 @@ function applyTranslations(dict) {
   document.querySelectorAll('[data-i18n-html]').forEach(el => {
     const key = el.getAttribute('data-i18n-html');
     if (dict[key]) el.innerHTML = dict[key];
+  });
+  document.querySelectorAll('[data-i18n-href]').forEach(el => {
+    const key = el.getAttribute('data-i18n-href');
+    if (dict[key]) el.setAttribute('href', dict[key]);
   });
 }
 window.addEventListener('DOMContentLoaded', () => {

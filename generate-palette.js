@@ -49,6 +49,11 @@ function updateStyleCss(colors) {
   console.log('Palette aggiornata!');
 }
 
-const baseColor = process.argv[2];
+let baseColor = process.argv[2];
+if (!baseColor) {
+  // Generate a random color if none is provided
+  baseColor = chroma.random().hex();
+  console.log('Nessun colore fornito, scelto automaticamente:', baseColor);
+}
 const colors = generatePalette(baseColor);
 updateStyleCss(colors);
